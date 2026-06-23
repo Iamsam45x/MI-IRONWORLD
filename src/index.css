@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1b1c1a;
+    background: #fbf9f5;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply font-body text-label-sm text-secondary uppercase tracking-widest mb-1;
+  }
+
+  .section-heading {
+    @apply font-heading text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4;
+  }
+
+  .section-underline {
+    @apply w-12 h-1 bg-secondary mt-3;
+  }
+
+  .card {
+    @apply bg-surface-container-lowest border border-outline-variant rounded p-6 hover:shadow-level-1 transition-shadow;
+  }
+
+  .icon-box {
+    @apply w-12 h-12 bg-secondary/10 rounded flex items-center justify-center flex-shrink-0;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-on-primary font-body font-semibold px-6 py-3 rounded hover:bg-primary-container transition-colors text-sm;
+  }
+
+  .btn-outline {
+    @apply bg-surface-container-lowest text-on-surface font-body font-semibold px-6 py-3 rounded hover:bg-surface-container-low transition-colors text-sm;
+  }
+}
